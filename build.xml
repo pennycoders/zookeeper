@@ -1059,7 +1059,7 @@ xmlns:maven="antlib:org.apache.maven.artifact.ant">
           </replacetokens>
         </filterchain>
       </copy>
-      <rpm specFile="zookeeper.spec" command="-ba --buildroot=${package.buildroot}/BUILD" topDir="${package.buildroot}" cleanBuildDir="true" failOnError="true"
+      <rpmbuild specFile="zookeeper.spec" command="-ba --buildroot=${package.buildroot}/BUILD" topDir="${package.buildroot}" cleanBuildDir="true" failOnError="true"
 />
       <copy todir="${build.dir}/" flatten="true">
         <fileset dir="${package.buildroot}/RPMS">
